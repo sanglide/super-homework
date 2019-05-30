@@ -78,14 +78,18 @@ $(document).ready(function() {
             '/hall/add',//这里待传
             formData,//上传表单
             function (res) {
-                getCinemaHalls();
-                $("#hallModal").modal('hide');//表单隐藏
+                if (res.success) {
+                    getCinemaHalls();
+                    $("#hallModal").modal('hide');//表单隐藏
+                }else{
+                    alert(res.message);
+                }
             },
             function (error) {
                 alert(error);
             });
 
-
+//
     });
     function getHallForm() {
         return {
