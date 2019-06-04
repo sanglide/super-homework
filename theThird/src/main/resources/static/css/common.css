@@ -55,9 +55,11 @@ ul {
 }
 .primary-text {
     color: #1caf9a;
+    /*color:#0099cc;*/
 }
 .primary-bg {
     background: #1caf9a;
+    /*background-color: #0099cc;*/
 }
 .error-bg {
     background: #ed5565;

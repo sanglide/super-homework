@@ -1104,11 +1104,13 @@ textarea {
 }
 a {
   color: #1caf9a;
+  /*color:#5bc0de;*/
   text-decoration: none;
 }
 a:hover,
 a:focus {
   color: #116d60;
+  /*color:#31b0d5;*/
   text-decoration: underline;
 }
 a:focus {
@@ -4103,7 +4105,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #1caf9a;
+  /*background-color: #1caf9a;*/
+  background-color: #0099cc;
 }
 .nav-stacked > li {
   float: none;
