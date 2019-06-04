@@ -158,7 +158,7 @@ $(document).ready(function() {
                 function (res) {
                     if(res.success){
                         getCinemaHalls();
-                        $("#changeHallModal").modal('hide');
+                        $("#deleteHallModal").modal('hide');
                     } else{
                         alert(res.message);
                     }

@@ -4,8 +4,41 @@ $(document).ready(function() {
     var buyNum=100;
     var members=[];
 
+    getCouponsList();
     getCouponsNum();
     getBuyNum();
+
+    //以下为获取会员名单的方法
+    function getCouponsList(){
+        // 以下需注释掉
+        var list1=[{
+            username:"ezio",
+            password:123456,
+            id:1
+        },{
+            username:"router",
+            password:123456,
+            id:2
+        }]
+        renderMemberList(list1);
+
+        //以下为与后端交互真方法
+        // postRequest(
+        //     '/coupon/changeBuyNum',
+        //     {buyNum:buyNum},
+        //     function (res) {
+        //         var list=res.content;
+        //         renderMemberList(list);
+        //
+        //     },
+        //     function (error) {
+        //         alert(JSON.stringify(error));
+        //     }
+        // );
+        // renderMemberList(list);
+
+    }
+
     //以下为更改优惠金额的方法
     function getCouponsNum() {
 
@@ -71,7 +104,7 @@ $(document).ready(function() {
 
     $('#buy-modify-btn').click(function () {
         $("#buy-modify-btn").hide();
-        $("#buy-set-input").val(canNum);
+        $("#buy-set-input").val(buyNum);
         $("#buy-set-input").show();
         $("#buy-confirm-btn").show();
     });
@@ -80,48 +113,19 @@ $(document).ready(function() {
     $('#buy-confirm-btn').click(function () {
         var bNum = $("#buy-set-input").val();
 
-        // 以下需注释掉
-        var list1=[{
-            username:"ezio",
-            password:123456,
-            id:1
-        },{
-            username:"router",
-            password:123456,
-            id:2
-        }]
-        renderMemberList(list1);
         buyNum = bNum;
         getBuyNum();
         $("#buy-modify-btn").show();
         $("#buy-set-input").hide();
         $("#buy-confirm-btn").hide();
-
-        //以下为与后端交互真方法
-        // postRequest(
-        //     '/coupon/changeBuyNum',
-        //     {buyNum:buyNum},
-        //     function (res) {
-        //         var list=res.content;
-        //         renderMemberList(list);
-        //         buyNum = bNum;
-        //         getBuyNum();
-        //         $("#buy-modify-btn").show();
-        //         $("#buy-set-input").hide();
-        //         $("#buy-confirm-btn").hide();
-        //
-        //     },
-        //     function (error) {
-        //         alert(JSON.stringify(error));
-        //     }
-        // );
+        getCouponsList();
 
     })
 
     //以下为展示用户的方法
 
     function renderMemberList(list) {
-        $('.member-card').empty();
+        $('#myTable').empty();
         var memberDomStr = '';
         list.forEach(function (member) {
             memberDomStr +=
