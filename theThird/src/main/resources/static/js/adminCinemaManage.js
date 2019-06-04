@@ -30,6 +30,7 @@ $(document).ready(function() {
             nameStr += "<option>" +hall.name+ "</option>"
         }
         $('#order-halls').html(nameStr);
+        $('#delete-order-halls').html(nameStr);
         halls.forEach(function (hall) {
             var seat = "";
             for(var i =0;i<hall.row;i++){
@@ -146,7 +147,7 @@ $(document).ready(function() {
 
 
     });
-    $("#changeHall-edit-remove-btn").click(function () {
+    $("#deleteHall-edit-remove-btn").click(function () {
         var r=confirm("确认要删除该影厅吗")
         var deleteForm=changeHallForm()
         console.log(deleteForm);
