@@ -274,21 +274,6 @@ th {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
-
-@font-face {
-  font-family: 'Chalk';
-  src:url('../font/chalk.otf');
-}
-
-@font-face {
-  font-family: 'Tian';
-  src: url("../font/Tian.ttf");
-}
-
-@font-face {
-  font-family:"ZiZai" ;
-  src: url("../font/ZiZai.ttf");
-}
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1103,13 +1088,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "ZiZai";
-  /*font-family: "Comic Sans MS";*/
-  /*font-family:"Tian";*/
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family:"Chalk";*/
-  font-size:20px;
-  /*font-size: 14px;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;
@@ -1124,11 +1104,13 @@ textarea {
 }
 a {
   color: #1caf9a;
+  /*color:#5bc0de;*/
   text-decoration: none;
 }
 a:hover,
 a:focus {
   color: #116d60;
+  /*color:#31b0d5;*/
   text-decoration: underline;
 }
 a:focus {
@@ -4123,7 +4105,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #002c2d;
+  /*background-color: #1caf9a;*/
+  background-color: #0099cc;
 }
 .nav-stacked > li {
   float: none;
