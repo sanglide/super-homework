@@ -149,7 +149,7 @@ $(document).ready(function() {
     });
     $("#deleteHall-edit-remove-btn").click(function () {
         var r=confirm("确认要删除该影厅吗")
-        var deleteForm=changeHallForm()
+        var deleteForm=deleteHallForm()
         console.log(deleteForm);
         if (r) {
             deleteRequest(
@@ -175,6 +175,11 @@ $(document).ready(function() {
             row: $('#changeRow-num-input').val(),
             column: $('#changeColumn-num-input').val(),
         };
+    }
+    function deleteHallForm(){
+        return{
+            name: document.getElementById("delete-order-halls").value
+        }
     }
     //下面为可见时间的实现
     function getCanSeeDayNum() {
